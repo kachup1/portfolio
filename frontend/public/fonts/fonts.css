@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'PP Monument Extended';
+  src: url('/fonts/PPMonument/PPMonumentExtended-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PP Monument Extended';
+  src: url('/fonts/PPMonument/PPMonumentExtended-Black.otf') format('opentype');
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'PP Monument Extended';
+  src: url('/fonts/PPMonument/PPMonumentExtended-Light.otf') format('opentype');
+  font-weight: 300;
+}
