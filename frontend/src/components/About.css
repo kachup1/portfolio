@@ -12,7 +12,7 @@
   background: black;
   opacity: 1;
   pointer-events: none;
-  transition: opacity 13s ease-out;
+  transition: opacity 5s ease-out;
 }
 
 
