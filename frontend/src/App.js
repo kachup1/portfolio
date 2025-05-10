@@ -11,17 +11,19 @@ import AnimatedBackground from "./components/AnimatedBackground";
 
 function App() {
   return (
-    <div className="overlay-box">
-      <AnimatedBackground />
-      {<Header />}
-      {<About />}
-      {/* <Skills /> */}
-      {/* <Projects /> */}
-      {/* <Contact /> */}
-    </div>
-
+    <>
+      <Header /> 
+      <div className="overlay-box">
+        <AnimatedBackground />
+        <About />
+        <Skills />
+        {/* <Projects /> */}
+        {/* <Contact /> */}
+      </div>
+    </>
   );
 }
+
 
 
 export default App;

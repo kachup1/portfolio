@@ -1,7 +1,11 @@
+main {
+  padding-top: 100px; 
+}
 .header {
   position: fixed;
   top: 0;
   right: 0;
+  width: 100%;        
   padding: 2rem;
   z-index: 1000;
 }
@@ -26,5 +30,8 @@
 }
 
 .header nav a:hover {
-  color: hotpink; /* Or whatever your accent is */
+  /*color: hotpink;  Or whatever your accent is */
+  color: rgb(27, 159, 203);
 }
+
+

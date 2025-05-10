@@ -11,7 +11,6 @@ html, body {
 
 
 }
-
 .app {
   display: flex;
   flex-direction: column;
@@ -27,9 +26,10 @@ main {
 
 .overlay-box {
   background-color: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(6px); /* frosted glass effect */
+  backdrop-filter: blur(6px); 
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  height: 100vh; 
+  min-height: 100vh; 
+  height: 100%;       
   width: auto;
   margin: 2%;
 }

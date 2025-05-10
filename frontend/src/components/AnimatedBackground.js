@@ -5,12 +5,12 @@ import waveGrid from "../assets/wave-grid.json";
 function AnimatedBackground() {
   const [fadeOut, setFadeOut] = useState(false);
   const [visible, setVisible] = useState(true);
-  const lottieRef = useRef(); // 👈 ref to control the animation
+  const lottieRef = useRef(); 
 
   useEffect(() => {
     // Set playback speed to 2x once Lottie is mounted
     if (lottieRef.current) {
-      lottieRef.current.setSpeed(2); // 👈 this works!
+      lottieRef.current.setSpeed(2); 
     }
 
     const fadeStart = setTimeout(() => setFadeOut(true), 2000); // Show for 2s
@@ -27,7 +27,7 @@ function AnimatedBackground() {
   return (
     <div className={`background-overlay ${fadeOut ? "fade-out" : ""}`}>
       <Lottie
-        lottieRef={lottieRef}          // 👈 attach the ref
+        lottieRef={lottieRef}         
         animationData={waveGrid}
         loop={false}
         className="lottie-zoom"

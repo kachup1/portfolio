@@ -8,18 +8,16 @@
   overflow: hidden;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   background: black;
   opacity: 1;
   pointer-events: none;
   transition: opacity 5s ease-out;
 }
 
-
 .background-overlay.fade-out {
   opacity: 0;
 }
-
 
 .hello {
     font-size: clamp(0.5rem, 6vw, 90px);
