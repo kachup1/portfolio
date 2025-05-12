@@ -20,11 +20,22 @@ function Projects(){
                         <h2 className="project-title">Renters Grid</h2>
                         <h3 className="project-dates">Jan 2024 - Dec 2024</h3>
                     </div>
-                    <p className="paragraph"> Words words.Words words.Words words.Words words.Words words.Words words.Words words.Words words.</p>
+                    <p className="paragraph"> RentersGrid helps renters share honest reviews about landlords and rental experiences, making it easier for others to find reliable places to live. It's all about creating more transparency in the renting process.</p>
                     
                     <div className="links-content">
-                        <h3 className="link-1">Learn more<img src={arrow} alt="arrow" /></h3>
-                        <h3 className="link-2">View demo<img src={arrow} alt="arrow" /></h3>
+
+                        <a href="https://github.com/kachup1/RentersGrid" className="link-1" target="_blank" rel="noopener noreferrer">
+                            <h3>
+                                Learn more <img src={arrow} alt="arrow" />
+                            </h3>
+                        </a>
+
+                        <a href="https://www.youtube.com/watch?v=fzw_6WwKZ3Q&feature=youtu.be" className="link-2" target="_blank" rel="noopener noreferrer">
+                            <h3>
+                                View demo <img src={arrow} alt="arrow" />
+                            </h3>
+                        </a>
+
                     </div>
 
                     <div className="image-container">  
@@ -41,10 +52,15 @@ function Projects(){
                         <h2 className="project-title">Kiwibot</h2>
                         <h3 className="project-dates">Oct 2024</h3>
                     </div>
-                    <p className="paragraph"> Words words.Words words.Words words.Words words.Words words.Words words.Words words.Words words.</p>
+                    <p className="paragraph"> KiwiBot helps you hit your daily protein goals by generating personalized recipes based on the ingredients you already have. Just tell it your protein target, and it does the rest.</p>
                     
                     <div className="links-content">
-                        <h3 className="link-1">Learn more<img src={arrow} alt="arrow" /></h3>
+
+                        <a href="https://github.com/kachup1/KiwiBot" className="link-1" target="_blank" rel="noopener noreferrer">
+                            <h3>
+                                Learn more <img src={arrow} alt="arrow" />
+                            </h3>
+                        </a>
                     </div>
 
                     <div className="image-container">  
@@ -53,7 +69,7 @@ function Projects(){
                         <img src={kiwibot3} alt="kiwibot3" />
 
                     </div>
-                    
+
                     <div className="horizontal-line"></div>
 
                 </div>

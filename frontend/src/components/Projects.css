@@ -12,19 +12,20 @@
     position: relative;
 }
 .vertical-rectangle {
-    width: 1%;
+    width: .5%;
     background-color: white;
     margin-left: 30.5%;
 }
 .project-content{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 53%;
 }
+
 .project-header{
     display: flex;
     align-items: baseline;
-    justify-content: flex-start;
+    justify-content: space-between;
     gap: 10%;
 }
 .project-title {
@@ -43,6 +44,7 @@
 .paragraph{
     margin: 0;
     font-size: clamp(.1rem, 3vw, 1rem);
+    font-weight: 400;
 }
 .links-content{
     display: flex;
@@ -53,8 +55,8 @@
 
 .link-1, .link-2 {
     text-decoration: underline;
+    color: inherit;
     font-size: clamp(.1rem, 1.5vw, .7rem);
-    font-weight: 300;
     margin: 1%;
 }
 .link-1 img, .link-2 img{

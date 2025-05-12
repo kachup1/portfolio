@@ -30,8 +30,8 @@ main {
 }
 
 .header nav a:hover {
-  /*color: hotpink;  Or whatever your accent is */
-  color: rgb(27, 159, 203);
+  color: rgb(253, 152, 202);  
+  /*color: rgb(27, 159, 203);*/
 }
 
 
