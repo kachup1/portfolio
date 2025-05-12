@@ -1,0 +1,95 @@
+.project-container {
+  display: flex;
+  align-items: stretch; 
+  gap: 2rem;
+}
+.projects-string {
+    font-size: clamp(0.5rem, 6vw, 90px);
+    margin: 0;
+    padding-top: 10%;
+    padding-left: 15%;
+    font-weight: 400;
+    position: relative;
+}
+.vertical-rectangle {
+    width: 1%;
+    background-color: white;
+    margin-left: 30.5%;
+}
+.project-content{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.project-header{
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    gap: 10%;
+}
+.project-title {
+    margin-right: 0;
+    font-size: clamp(.5rem, 5vw, 2rem);
+    font-weight: 400;
+
+}
+.project-dates{
+    font-weight: 400;
+    font-size: clamp(.1rem, 2vw, .9rem);
+    margin: 0;
+    text-align: right;
+
+}
+.paragraph{
+    margin: 0;
+    font-size: clamp(.1rem, 3vw, 1rem);
+}
+.links-content{
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    gap: 10%;
+}
+
+.link-1, .link-2 {
+    text-decoration: underline;
+    font-size: clamp(.1rem, 1.5vw, .7rem);
+    font-weight: 300;
+    margin: 1%;
+}
+.link-1 img, .link-2 img{
+    width: 20px;
+    margin-bottom: -5px;
+}
+.image-container {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    gap: 2%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-color: white black; 
+    scrollbar-width: thin;
+    height: 100%;
+}
+/* WebKit (Chrome, Edge, Safari) */
+.image-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.image-container::-webkit-scrollbar-thumb {
+  background-color: white;
+}
+.image-container img{
+    width: 60%;
+    height: auto;
+    margin: 0;
+}
+
+.horizontal-line {
+    width: auto;
+    height: .1%;
+    background-color: rgb(51, 49, 49);
+    margin-top: 6%;
+}
+

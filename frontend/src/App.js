@@ -17,7 +17,7 @@ function App() {
         <AnimatedBackground />
         <About />
         <Skills />
-        {/* <Projects /> */}
+        <Projects />
         {/* <Contact /> */}
       </div>
     </>
