@@ -1,0 +1,46 @@
+.contact-string {
+    font-size: clamp(0.5rem, 6vw, 90px);
+    margin: 0;
+    padding-top: 10%;
+    padding-left: 15%;
+    font-weight: 400;
+    position: relative;
+}
+
+.contact-form-container {
+    display: flex;
+    align-items: stretch; 
+    flex-direction: column;
+    gap: 2rem;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.name-container, .email-container, .message-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.name-string, .email-string, .message-string {
+    margin: 0;
+    font-size: clamp(.1rem, 2vw, 1rem);
+}
+
+.name-text-box, .email-text-box, .message-text-box {
+    margin: 0;
+    flex: 1;
+}
+
+.input-box, .input-box2 {
+    width: 100%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    font-family: 'Source Code Pro', monospace; 
+
+}
+
+.input-box2{
+    height: 8rem;
+}
+
