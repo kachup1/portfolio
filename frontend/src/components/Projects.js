@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import './Projects.css';
 import arrow from '../assets/images/arrowOutward.svg';
 import rentersGrid1 from '../assets/images/rentersGrid1.JPG';
@@ -8,6 +9,11 @@ import kiwibot2 from '../assets/images/kiwibot2.jpg';
 import kiwibot3 from '../assets/images/kiwibot3.jpg';
 
 function Projects(){
+    const [expandedIndex, setExpandedIndex] = useState(null);
+    const toggleExpand = (index) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
+    };
+
     return (
         <section id="projects">
             <div className="projects-string">Projects.</div>
@@ -38,12 +44,19 @@ function Projects(){
 
                     </div>
 
-                    <div className="image-container">  
-                        <img src={rentersGrid1} alt="rentersGrid1" />
-                        <img src={rentersGrid2} alt="rentersGrid2" />
-                        <img src={rentersGrid3} alt="rentersGrid3" />
-
+                    <div className="image-container">
+                    {[rentersGrid1, rentersGrid2, rentersGrid3].map((image, index) => (
+                        <img
+                        key={index}
+                        src={image}
+                        alt={`rentersGrid${index + 1}`}
+                        className={expandedIndex === index ? "project-image expanded" : "project-image"}
+                        onClick={() => toggleExpand(index)}
+                        />
+                    ))}
                     </div>
+
+
 
                     <div className="horizontal-line"></div>
 
@@ -63,11 +76,17 @@ function Projects(){
                         </a>
                     </div>
 
-                    <div className="image-container">  
-                        <img src={kiwibot1} alt="kiwibot1" />
-                        <img src={kiwibot2} alt="kiwibot2" />
-                        <img src={kiwibot3} alt="kiwibot3" />
+                    <div className="image-container">
+                    {[kiwibot1, kiwibot2, kiwibot3].map((image, index) => (
+                        <img
+                        key={index + 3} // ensures key is unique from rentersGrid images
+                        src={image}
+                        alt={`kiwibot${index + 1}`}
+                        className={expandedIndex === index + 3 ? "project-image expanded" : "project-image"}
+                        onClick={() => toggleExpand(index + 3)}
+                        />
 
+                    ))}
                     </div>
 
                     <div className="horizontal-line"></div>
@@ -75,7 +94,6 @@ function Projects(){
                 </div>
 
             </div>
-            
         </section>
 
     );

@@ -44,7 +44,7 @@
 .paragraph{
     margin: 0;
     font-size: clamp(.1rem, 3vw, 1rem);
-    font-weight: 400;
+    font-weight: 350;
 }
 .links-content{
     display: flex;
@@ -58,6 +58,11 @@
     color: inherit;
     font-size: clamp(.1rem, 1.5vw, .7rem);
     margin: 1%;
+}
+
+.link-1:hover, .link-2:hover {
+  color: rgb(253, 152, 202);  
+  /*color: rgb(27, 159, 203);*/
 }
 .link-1 img, .link-2 img{
     width: 20px;
@@ -87,6 +92,35 @@
     height: auto;
     margin: 0;
 }
+.expanded-image {
+  transform: scale(1.8);
+  z-index: 10;
+}
+
+
+.image-container {
+  display: flex;
+  flex-wrap: nowrap;       
+  flex-direction: row;
+  gap: 1rem;
+  transition: all 0.3s ease;
+}
+
+.project-image {
+  width: 30%;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease, width 0.3s ease;
+  border-radius: 8px;
+}
+
+.project-image.expanded {
+  width: 80%; /* or 100% if you want it full */
+}
+
+
+
+
 
 .horizontal-line {
     width: auto;
