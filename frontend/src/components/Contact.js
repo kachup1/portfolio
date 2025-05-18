@@ -1,9 +1,34 @@
 import './Contact.css';
+import { useState } from 'react';
 import github from '../assets/images/github_logo.png';
 import linkedin from '../assets/images/LinkedIn_icon.png';
 
 
 function Contact() {
+
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+
+    const handleSubmit = () => {
+        if (!name || !email || !message) {
+            alert("All fields must be filled.");
+            return;
+        }
+
+        if (!email.includes('@') || !email.includes('.')) {
+            alert("Please enter a valid email address.");
+            return;
+        }
+
+        if (message.length < 10) {
+            alert("Message must be at least 10 characters.");
+            return;
+        }
+
+        alert("Validation passed. Ready to send!");
+    };
+
     return (
         <section id="contact">
             <h1 className="contact-string">Contact.</h1>
@@ -13,29 +38,43 @@ function Contact() {
                 <div className="name-container">
                     <h3 className="name-string">NAME:</h3>
                     <div className="name-text-box">
-                          <input type="text" placeholder="Enter your name" className="input-box" />
+                          <input 
+                            type="text" 
+                            placeholder="Enter your name" 
+                            className="input-box" 
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                          />
                     </div>
                 </div>
 
                 <div className="email-container">
                     <h3 className="email-string">EMAIL:</h3>
                     <div className="email-text-box">
-                          <input type="text" placeholder="Enter email" className="input-box" />
+                          <input 
+                            type="text" 
+                            placeholder="Enter email" 
+                            className="input-box" 
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                          />
                     </div>
                 </div>
 
                 <div className="message-container">
                     <h3 className="message-string">MESSAGE:</h3>
                     <div className="message-text-box">
-                        <textarea placeholder="Write your message..." className="input-box2"></textarea>
+                        <textarea 
+                            placeholder="Write your message..." 
+                            className="input-box2"
+                            value={message}
+                            onChange={(e) => setMessage(e.target.value)}
+                        ></textarea>
                     </div>
                 </div>
                 <div className="button-container">
-
                     <button type="button" className="submit-button">Submit</button>
-
                 </div>
-
             </div>
 
             <div className="contact-logos-container">
