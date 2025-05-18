@@ -73,7 +73,7 @@ function Contact() {
                     </div>
                 </div>
                 <div className="button-container">
-                    <button type="button" className="submit-button">Submit</button>
+                    <button type="button" className="submit-button" onClick={handleSubmit}>Submit</button>
                 </div>
             </div>
 
