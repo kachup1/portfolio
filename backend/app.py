@@ -1,11 +1,16 @@
+
 from flask import Flask, request, jsonify
 from flask_mail import Mail, Message
 from dotenv import load_dotenv
 import os
+from flask_cors import CORS
+
 
 load_dotenv()  # Load variables from .env
 
 app = Flask(__name__)
+CORS(app)
+
 
 # Email config
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'

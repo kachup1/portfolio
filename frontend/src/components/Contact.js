@@ -10,7 +10,7 @@ function Contact() {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
 
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
         if (!name || !email || !message) {
             alert("All fields must be filled.");
             return;
@@ -25,8 +25,28 @@ function Contact() {
             alert("Message must be at least 10 characters.");
             return;
         }
+        
+        //send to Flask
+        try {
+            const response = await fetch("http://localhost:5000/api/contact", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ name, email, message }),
+            });
 
-        alert("Validation passed. Ready to send!");
+            const data = await response.json();
+
+            if (response.ok) {
+            alert("Message sent successfully!");
+            setName('');
+            setEmail('');
+            setMessage('');
+            } else {
+            alert("Failed to send message: " + data.error);
+            }
+        } catch (err) {
+            alert("An error occurred: " + err.message);
+        }
     };
 
     return (
