@@ -13,12 +13,17 @@ function App() {
   return (
     <>
       <Header /> 
-      <div className="overlay-box">
-        <AnimatedBackground />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
+      <div className="overlay-container">
+        <div className="overlay-box">
+          
+          <AnimatedBackground />
+          <About />
+          <Skills />
+          <Projects />
+          <Contact />
+
+        </div>
+
       </div>
     </>
   );
