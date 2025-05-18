@@ -61,14 +61,12 @@
 }
 
 .button-container {
-  display: flex;
-  justify-content: center;
-}
- .submit-button {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
-
+    flex-direction: column;
+}
+.submit-button {
     background-color: white;
     color: black;
     height: 2rem;
@@ -76,10 +74,30 @@
     border-radius: 20px;
     border: 0;
  }
+ .status-message {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.status-message.success {
+  color: #2ecc71;
+  background-color: rgba(46, 204, 113, 0.1);
+}
+
+.status-message.error {
+  color: #e74c3c;
+  background-color: rgba(231, 76, 60, 0.1);
+}
+
 
 .submit-button:hover {
   background-color:  rgb(253, 152, 202);  
 ;
   color: white;
 }
+
 

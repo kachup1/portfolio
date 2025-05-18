@@ -9,20 +9,25 @@ function Contact() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
+    const [statusMessage, setStatusMessage] = useState('');
+    const [statusType, setStatusType] = useState('');
 
     const handleSubmit = async () => {
         if (!name || !email || !message) {
-            alert("All fields must be filled.");
+            setStatusMessage("*All fields must be filled.");
+            setStatusType("error")
             return;
         }
 
         if (!email.includes('@') || !email.includes('.')) {
-            alert("Please enter a valid email address.");
+            setStatusMessage("*Please enter a valid email address.");
+            setStatusType("error")
             return;
         }
 
         if (message.length < 10) {
-            alert("Message must be at least 10 characters.");
+            setStatusMessage("*Message must be at least 10 characters.");
+            setStatusType("error")
             return;
         }
         
@@ -37,15 +42,18 @@ function Contact() {
             const data = await response.json();
 
             if (response.ok) {
-            alert("Message sent successfully!");
+            setStatusMessage("Message sent successfully!");
+            setStatusType("success")
             setName('');
             setEmail('');
             setMessage('');
             } else {
-            alert("Failed to send message: " + data.error);
-            }
+            setStatusMessage("Failed to send message: " + data.error);
+            setStatusType('error')
+        }
         } catch (err) {
-            alert("An error occurred: " + err.message);
+            setStatusMessage("An error occurred: " + err.message);
+            setStatusType('error')
         }
     };
 
@@ -94,6 +102,11 @@ function Contact() {
                 </div>
                 <div className="button-container">
                     <button type="button" className="submit-button" onClick={handleSubmit}>Submit</button>
+                    {statusMessage && (
+                        <div className={`status-message ${statusType}`}>
+                            {statusMessage}
+                        </div>
+                    )}
                 </div>
             </div>
 
