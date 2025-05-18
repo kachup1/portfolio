@@ -45,7 +45,6 @@
 }
 
 .contact-logos-container {
-    position: flex;
     padding: 5%;
     
 }
@@ -61,4 +60,26 @@
     height: auto;
 }
 
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+ .submit-button {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+
+    background-color: white;
+    color: black;
+    height: 2rem;
+    width: 15%;
+    border-radius: 20px;
+    border: 0;
+ }
+
+.submit-button:hover {
+  background-color:  rgb(253, 152, 202);  
+;
+  color: white;
+}
 

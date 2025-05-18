@@ -30,6 +30,11 @@ function Contact() {
                         <textarea placeholder="Write your message..." className="input-box2"></textarea>
                     </div>
                 </div>
+                <div className="button-container">
+
+                    <button type="button" className="submit-button">Submit</button>
+
+                </div>
 
             </div>
 
