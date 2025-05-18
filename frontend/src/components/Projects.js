@@ -65,7 +65,7 @@ function Projects(){
                         <h2 className="project-title">Kiwibot</h2>
                         <h3 className="project-dates">Oct 2024</h3>
                     </div>
-                    <p className="paragraph"> KiwiBot helps you hit your daily protein goals by generating personalized recipes based on the ingredients you already have. Just tell it your protein target, and it does the rest.</p>
+                    <p className="paragraph"> Kiwibot helps you hit your daily protein goals by generating personalized recipes based on the ingredients you already have. Just tell it your protein target, and it does the rest.</p>
                     
                     <div className="links-content">
 
@@ -79,7 +79,7 @@ function Projects(){
                     <div className="image-container">
                     {[kiwibot1, kiwibot2, kiwibot3].map((image, index) => (
                         <img
-                        key={index + 3} // ensures key is unique from rentersGrid images
+                        key={index + 3}
                         src={image}
                         alt={`kiwibot${index + 1}`}
                         className={expandedIndex === index + 3 ? "project-image expanded" : "project-image"}

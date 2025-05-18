@@ -1,4 +1,7 @@
 import './Contact.css';
+import github from '../assets/images/github_logo.png';
+import linkedin from '../assets/images/LinkedIn_icon.png';
+
 
 function Contact() {
     return (
@@ -28,6 +31,24 @@ function Contact() {
                     </div>
                 </div>
 
+            </div>
+
+            <div className="contact-logos-container">
+                <div className="skill-item2">
+                    
+                    <a href="https://github.com/kachup1" className="link-1" target="_blank" rel="noopener noreferrer">
+                        <h3>
+                            <img src={github} alt="Github" />
+                        </h3>
+                    </a>
+
+                    <a href="https://linkedin.com/in/karla-chuprinski" className="link-1" target="_blank" rel="noopener noreferrer">
+                        <h3>
+                           <img src={linkedin} alt="Linkedin" />
+                        </h3>
+                    </a>
+                    
+                </div>
             </div>
         </section>
 

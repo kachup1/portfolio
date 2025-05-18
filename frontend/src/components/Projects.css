@@ -1,12 +1,13 @@
 .project-container {
-  display: flex;
-  align-items: stretch; 
-  gap: 2rem;
+    display: flex;
+    align-items: stretch; 
+    gap: 2rem;
+    padding-bottom: 10%;
 }
 .projects-string {
     font-size: clamp(0.5rem, 6vw, 90px);
     margin: 0;
-    padding-top: 10%;
+    padding-top: 0;
     padding-left: 15%;
     font-weight: 400;
     position: relative;
@@ -115,12 +116,8 @@
 }
 
 .project-image.expanded {
-  width: 80%; /* or 100% if you want it full */
+  width: 80%; 
 }
-
-
-
-
 
 .horizontal-line {
     width: auto;

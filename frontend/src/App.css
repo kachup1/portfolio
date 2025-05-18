@@ -9,7 +9,6 @@ html, body {
   font-weight: 400;
   scroll-behavior: smooth;
 
-
 }
 .app {
   display: flex;
@@ -32,6 +31,9 @@ main {
   height: 100%;       
   width: auto;
   margin: 2%;
+  border: 2px solid rgb(26, 26, 26); 
+  border-radius: 8px;
+
 }
 
 
