@@ -33,7 +33,7 @@ def contact():
     if not name or not email or not message:
         return jsonify({"error": "All fields are required"}), 400
 
-    # ✅ Validate reCAPTCHA
+    # Validate reCAPTCHA
     captcha_secret = os.getenv("RECAPTCHA_SECRET_KEY")
     verify_response = requests.post(
         "https://www.google.com/recaptcha/api/siteverify",
