@@ -15,6 +15,9 @@ function Contact() {
     const [captchaToken, setCaptchaToken] = useState('');
     const [botField, setBotField] = useState('');
 
+    console.log("RECAPTCHA KEY:", process.env.REACT_APP_RECAPTCHA_SITE_KEY);
+
+
     const handleSubmit = async () => {
         if (!name || !email || !message) {
             setStatusMessage("*All fields must be filled.");
@@ -112,11 +115,13 @@ function Contact() {
                     style={{ display: 'none' }}
                 />
                 
-                console.log("RECAPTCHA KEY:", process.env.REACT_APP_RECAPTCHA_SITE_KEY);
+                <div style={{ marginBottom: '1rem' }}>
                 <ReCAPTCHA
-                sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
-                onChange={(token) => setCaptchaToken(token)}
+                    sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
+                    onChange={(token) => setCaptchaToken(token)}
                 />
+                </div>
+
 
                 <div className="button-container">
                     <button type="button" className="submit-button" onClick={handleSubmit}>Submit</button>
