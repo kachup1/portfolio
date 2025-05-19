@@ -8,7 +8,11 @@ main {
   width: 100%;        
   padding: 2rem;
   z-index: 1000;
-  pointer-events: none; 
+  pointer-events: none;
+}
+
+.header nav {
+  pointer-events: auto;
 }
 
 .header nav ul {
