@@ -58,7 +58,7 @@ function Contact() {
     };
 
     return (
-        <section id="contact" data-aos="fade-up">
+        <section id="contact" data-aos="fade-right">
             <h1 className="contact-string">Contact.</h1>
 
             <div className="contact-form-container">

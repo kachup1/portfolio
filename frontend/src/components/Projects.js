@@ -91,6 +91,22 @@ function Projects(){
 
                     <div className="horizontal-line"></div>
 
+                    <div className="project-header">
+                        <h2 className="project-title">Portfolio Website</h2>
+                        <h3 className="project-dates">May 2025</h3>
+                    </div>
+                        <p className="paragraph">
+                            A full-stack portfolio site to showcase my development work and design style. Built using React, Flask, and AOS with scroll animations, contact form validation, and secure email integration. Deployed via Vercel (frontend) and Render (backend).
+                        </p>
+
+                        <div className="links-content">
+                        <a href="https://github.com/kachup1/portfolio" target="_blank" className="link-1">
+                            <h3>View Source <img src={arrow} alt="arrow" /></h3>
+                        </a>
+                    </div>
+
+                    <div className="horizontal-line"></div>
+
                 </div>
 
             </div>

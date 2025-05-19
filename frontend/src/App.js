@@ -16,7 +16,7 @@ function App() {
 
   useEffect(() => {
   AOS.init({
-    duration: 800,
+    duration: 1000,
     once: false, // allow animation each time
   });
 
