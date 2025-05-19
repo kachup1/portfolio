@@ -10,7 +10,8 @@ import git from '../assets/images/git.png';
 
 function Skills() {
   return (
-    <section id="skills">
+    <section id="skills" data-aos="fade-up">
+
         <div className="skills-header">
             <h1 className="skill-string">Skills.</h1>
 

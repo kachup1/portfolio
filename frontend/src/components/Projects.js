@@ -15,7 +15,7 @@ function Projects(){
     };
 
     return (
-        <section id="projects">
+        <section id="projects" data-aos="fade-up">
             <div className="projects-string">Projects.</div>
 
             <div className="project-container">

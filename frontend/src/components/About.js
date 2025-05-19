@@ -4,7 +4,7 @@ import star from '../assets/images/silver-star.png';
 
 function About() {
   return (
-    <section id="about">
+    <section id="about" data-aos="fade-up">
         <div className="star-container">
         <h1 className="hello">Hello.</h1>
             <h1 className="my-name">
