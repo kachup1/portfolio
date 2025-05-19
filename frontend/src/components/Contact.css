@@ -45,7 +45,7 @@
 }
 
 .contact-logos-container {
-    padding: 5%;
+    padding: 1%;
     
 }
 .skill-item2 {
@@ -101,12 +101,10 @@
 }
 
 .recaptcha-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw; /* full viewport width */
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
 }
 
 
