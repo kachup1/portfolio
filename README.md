@@ -1,5 +1,5 @@
-
-# Karla Chuprinski – Portfolio
+![Portfolio Preview](./invertedlandingpage.png)
+# Portfolio
 
 Hi, I’m Karla — a full-stack software developer with a focus on creating responsive, user-friendly applications. This is my personal portfolio, built to showcase my work, skills, and background in both design and development.
 
