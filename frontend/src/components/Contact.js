@@ -114,14 +114,12 @@ function Contact() {
                     onChange={(e) => setBotField(e.target.value)}
                     style={{ display: 'none' }}
                 />
-                
-                <div style={{ marginBottom: '1rem' }}>
-                <ReCAPTCHA
-                    sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
-                    onChange={(token) => setCaptchaToken(token)}
-                />
+                <div className="recaptcha-wrapper">
+                    <ReCAPTCHA
+                        sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
+                        onChange={(token) => setCaptchaToken(token)}
+                    />
                 </div>
-
 
                 <div className="button-container">
                     <button type="button" className="submit-button" onClick={handleSubmit}>Submit</button>
