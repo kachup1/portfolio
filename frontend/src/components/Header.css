@@ -9,11 +9,10 @@ main {
   padding: 2rem;
   z-index: 1000;
   pointer-events: none; 
-  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .header nav {
-  pointer-events: auto;
+  pointer-events: none;
 }
 
 .header nav ul {
