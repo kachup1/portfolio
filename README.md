@@ -30,7 +30,7 @@ Hi, I’m Karla — a full-stack software developer with a focus on creating res
 
 Feel free to reach out via the contact form on the site or connect with me here:
 
-* 📧 [karla.chuprinski@gmail.com](mailto:karlachuprinski@gmail.com)
+* 📧 [karlachuprinski@gmail.com](mailto:karlachuprinski@gmail.com)
 * 💼 [LinkedIn](https://www.linkedin.com/in/karlachuprinski)
 * 🗂 [GitHub](https://github.com/kachup1)
 
