@@ -2,6 +2,7 @@ import './Contact.css';
 import { useState } from 'react';
 import github from '../assets/images/github_logo.png';
 import linkedin from '../assets/images/LinkedIn_icon.png';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 
 function Contact() {
@@ -11,6 +12,8 @@ function Contact() {
     const [message, setMessage] = useState('');
     const [statusMessage, setStatusMessage] = useState('');
     const [statusType, setStatusType] = useState('');
+    const [captchaToken, setCaptchaToken] = useState('');
+    const [botField, setBotField] = useState('');
 
     const handleSubmit = async () => {
         if (!name || !email || !message) {
@@ -36,7 +39,7 @@ function Contact() {
             const response = await fetch("http://localhost:5000/api/contact", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ name, email, message }),
+            body: JSON.stringify({ name, email, message, captchaToken, botField: '' }),
             });
 
             const data = await response.json();
@@ -100,6 +103,15 @@ function Contact() {
                         ></textarea>
                     </div>
                 </div>
+
+                <input
+                    type="text"
+                    name="botField"
+                    value={botField}
+                    onChange={(e) => setBotField(e.target.value)}
+                    style={{ display: 'none' }}
+                />
+
                 <div className="button-container">
                     <button type="button" className="submit-button" onClick={handleSubmit}>Submit</button>
                     {statusMessage && (

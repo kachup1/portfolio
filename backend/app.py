@@ -1,16 +1,15 @@
+import os
+import requests
 
 from flask import Flask, request, jsonify
 from flask_mail import Mail, Message
 from dotenv import load_dotenv
-import os
 from flask_cors import CORS
 
-
-load_dotenv()  # Load variables from .env
+load_dotenv()
 
 app = Flask(__name__)
 CORS(app)
-
 
 # Email config
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
@@ -28,9 +27,27 @@ def contact():
     name = data.get('name')
     email = data.get('email')
     message = data.get('message')
+    captcha_token = data.get('captchaToken')
+    
 
     if not name or not email or not message:
         return jsonify({"error": "All fields are required"}), 400
+
+    # ✅ Validate reCAPTCHA
+    captcha_secret = os.getenv("RECAPTCHA_SECRET_KEY")
+    verify_response = requests.post(
+        "https://www.google.com/recaptcha/api/siteverify",
+        data={
+            'secret': captcha_secret,
+            'response': captcha_token
+        }
+    )
+
+    if not verify_response.json().get("success"):
+        return jsonify({"error": "reCAPTCHA verification failed"}), 400
+    
+    if data.get('botField'):
+        return jsonify({"error": "Bot detected"}), 400
 
     try:
         msg = Message(subject=f"New Message from {name}",
@@ -48,3 +65,4 @@ def hello():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
