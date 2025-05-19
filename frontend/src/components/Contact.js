@@ -36,7 +36,7 @@ function Contact() {
         
         //send to Flask
         try {
-            const response = await fetch("http://localhost:5000/api/contact", {
+            const response = await fetch("https://portfolio-l420.onrender.com/api/contact", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ name, email, message, captchaToken, botField: '' }),
@@ -111,6 +111,14 @@ function Contact() {
                     onChange={(e) => setBotField(e.target.value)}
                     style={{ display: 'none' }}
                 />
+                
+                console.log("RECAPTCHA KEY:", process.env.REACT_APP_RECAPTCHA_SITE_KEY);
+
+                <ReCAPTCHA
+                    sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
+                    onChange={(token) => setCaptchaToken(token)}
+                />
+
 
                 <div className="button-container">
                     <button type="button" className="submit-button" onClick={handleSubmit}>Submit</button>
