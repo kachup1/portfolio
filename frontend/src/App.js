@@ -32,18 +32,20 @@ function App() {
   return (
     <>
       <Header /> 
-      <div className="overlay-container">
-        <div className="overlay-box">
-          
-          {/*<AnimatedBackground /> */}
-          <About />
-          <Skills />
-          <Projects />
-          <Contact />
+        <div className="overlay-container">
+          <div className="overlay-box">
+            
+            {/*<AnimatedBackground /> */}
+            <About />
+            <Skills />
+            <Projects />
+            <Contact />
 
+          </div>
         </div>
-
-      </div>
+        <footer>
+          <p>© 2025 Karla Chuprinski. All rights reserved.</p>
+        </footer>
     </>
   );
 }
