@@ -11,10 +11,6 @@ main {
   pointer-events: none; 
 }
 
-.header nav {
-  pointer-events: none;
-}
-
 .header nav ul {
   list-style: none;
   margin: 0;

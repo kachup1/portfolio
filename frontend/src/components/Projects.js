@@ -7,6 +7,7 @@ import rentersGrid3 from '../assets/images/rentersGrid3.JPG';
 import kiwibot1 from '../assets/images/kiwibot1.png';
 import kiwibot2 from '../assets/images/kiwibot2.jpg';
 import kiwibot3 from '../assets/images/kiwibot3.jpg';
+import portfolio from '../assets/images/website-landing.JPG';
 
 function Projects(){
     const [expandedIndex, setExpandedIndex] = useState(null);
@@ -104,6 +105,14 @@ function Projects(){
                             <h3>View Source <img src={arrow} alt="arrow" /></h3>
                         </a>
                     </div>
+                    <div className="image-container">
+                            <img
+                                src={portfolio}
+                                alt="portfolio"
+                                className={expandedIndex === 6 ? "project-image expanded" : "project-image"}
+                                onClick={() => toggleExpand(6)}
+                            />
+                            </div>
 
                     <div className="horizontal-line"></div>
 
