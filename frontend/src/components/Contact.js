@@ -2,7 +2,7 @@ import './Contact.css';
 import { useState } from 'react';
 import github from '../assets/images/github_logo.png';
 import linkedin from '../assets/images/LinkedIn_icon.png';
-import ReCAPTCHA from 'react-google-recaptcha';
+import ReCAPTCHA from "react-google-recaptcha";
 
 
 function Contact() {
@@ -113,12 +113,10 @@ function Contact() {
                 />
                 
                 console.log("RECAPTCHA KEY:", process.env.REACT_APP_RECAPTCHA_SITE_KEY);
-
                 <ReCAPTCHA
-                    sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
-                    onChange={(token) => setCaptchaToken(token)}
+                sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
+                onChange={(token) => setCaptchaToken(token)}
                 />
-
 
                 <div className="button-container">
                     <button type="button" className="submit-button" onClick={handleSubmit}>Submit</button>
