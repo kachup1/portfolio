@@ -114,17 +114,19 @@ function Contact() {
                     onChange={(e) => setBotField(e.target.value)}
                     style={{ display: 'none' }}
                 />
-                <div style={{ display: 'flex', justifyContent: 'center', marginTop: '1rem', marginBottom: '2rem' }}>
-                <div style={{ display: 'inline-block' }}>
-                    <ReCAPTCHA
-                    sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
-                    onChange={(token) => setCaptchaToken(token)}
-                    />
-                </div>
-                </div>
 
 
                 <div className="button-container">
+
+                <div style={{ display: 'flex', justifyContent: 'center', marginTop: '1rem', marginBottom: '2rem' }}>
+                    <div style={{ display: 'inline-block' }}>
+                        <ReCAPTCHA
+                        sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
+                        onChange={(token) => setCaptchaToken(token)}
+                        />
+                    </div>
+                </div>
+
                     <button type="button" className="submit-button" onClick={handleSubmit}>Submit</button>
                     {statusMessage && (
                         <div className={`status-message ${statusType}`}>
