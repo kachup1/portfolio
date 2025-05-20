@@ -115,7 +115,7 @@ function Contact() {
 
                 <div className="recaptcha-wrapper">
                 <ReCAPTCHA
-                    sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
+                    sitekey="6LcmdT8rAAAAAFZrbfh0O9vWO5eh0CoN-bxk05HC"
                     onChange={(token) => setCaptchaToken(token)}
                 />
                 </div>

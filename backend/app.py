@@ -21,8 +21,10 @@ app.config['MAIL_DEFAULT_SENDER'] = os.getenv("MAIL_USERNAME")
 
 mail = Mail(app)
 
-@app.route('/api/contact', methods=['POST'])
+@app.route('/api/contact', methods=['POST', 'OPTIONS'])
 def contact():
+    if request.method == 'OPTIONS':
+        return '', 204
     
     data = request.get_json()
     name = data.get('name')
