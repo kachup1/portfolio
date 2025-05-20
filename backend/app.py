@@ -38,6 +38,7 @@ def contact():
 
     # Validate reCAPTCHA
     captcha_secret = os.getenv("RECAPTCHA_SECRET_KEY")
+    print("Captcha token received:", captcha_token)
     verify_response = requests.post(
         "https://www.google.com/recaptcha/api/siteverify",
         data={

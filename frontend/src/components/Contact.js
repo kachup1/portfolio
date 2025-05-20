@@ -34,6 +34,12 @@ function Contact() {
             setStatusType("error")
             return;
         }
+        if (!captchaToken) {
+            setStatusMessage("*Please complete the reCAPTCHA.");
+            setStatusType("error");
+            return;
+        }
+
         
         //send to Flask
         try {
@@ -115,7 +121,7 @@ function Contact() {
 
                 <div className="recaptcha-wrapper">
                 <ReCAPTCHA
-                    sitekey="6LcmdT8rAAAAAFZrbfh0O9vWO5eh0CoN-bxk05HC"
+                    sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
                     onChange={(token) => setCaptchaToken(token)}
                 />
                 </div>
