@@ -124,12 +124,12 @@ footer {
     position: relative;
     left: -15%; 
     width: 2px;
-    height: auto;
+    height: 500px;
     background-color: white;
   }
   .project-content {
     width: 60%!important;
-    margin-left: -20%;  
+    margin-left: -15%;  
   }
   .paragraph{
     font-size: clamp(.1rem, 5vw, .9rem) !important;
