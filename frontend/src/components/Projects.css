@@ -115,7 +115,7 @@
   cursor: pointer;
   transition: transform 0.3s ease, width 0.3s ease;
   border-radius: 8px;
-      border: 0;
+  border: 0;
 }
 
 .project-image.expanded {

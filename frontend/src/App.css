@@ -128,8 +128,12 @@ footer {
     background-color: white;
   }
   .project-content {
-    width: 90%;
+    width: 60%!important;
     margin-left: -20%;  
+  }
+  .paragraph{
+    font-size: clamp(.1rem, 5vw, .9rem) !important;
+    font-weight: 200 !important;
   }
 }
 
