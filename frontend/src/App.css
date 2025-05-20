@@ -119,7 +119,7 @@ footer {
   .project-container {
     flex-direction: row;
     align-items: flex-start;
-    height: auto;
+    min-height: 300px;
   }
   .vertical-rectangle {
     position: relative;
