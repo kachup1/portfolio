@@ -1,32 +1,35 @@
 main {
   padding-top: 100px; 
 }
+
+/* === HEADER BASE === */
 .header {
   position: fixed;
   top: 0;
   right: 0;
-  width: 100%;        
-  padding: 2rem;
+  width: 100%; 
+  padding: 1.5rem;
   z-index: 1000;
-  pointer-events: none;
+  pointer-events: none; /* overridden on mobile */
 }
 
-.header nav {
+/* === DESKTOP NAVIGATION === */
+.desktop-nav {
   pointer-events: auto;
 }
 
-.header nav ul {
+.desktop-nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
   text-align: right;
 }
 
-.header nav li {
+.desktop-nav li {
   margin-bottom: -0.1rem;
 }
 
-.header nav a {
+.desktop-nav a {
   text-decoration: none;
   color: white;
   font-size: clamp(0.4rem, 2vw, 0.9rem);
@@ -34,9 +37,74 @@ main {
   transition: color 0.2s ease-in-out;
 }
 
-.header nav a:hover {
-  color: rgb(253, 152, 202);  
-  /*color: rgb(27, 159, 203);*/
+.desktop-nav a:hover {
+  color: rgb(253, 152, 202);
 }
 
+/* === MOBILE ONLY === */
+@media (max-width: 768px) {
+  .header {
+    pointer-events: auto;
+  }
 
+  .desktop-nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+    z-index: 1100;
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.95);
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    pointer-events: none;
+  }
+
+  .nav-menu.open {
+    transform: translateX(0%);
+    pointer-events: auto;
+  }
+
+  .nav-menu ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+  }
+
+  .nav-menu li {
+    margin: 1.5rem 0;
+  }
+
+  .nav-menu a {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+/* === DESKTOP FALLBACK FOR OVERLAY === */
+.nav-menu {
+  display: none;
+}
+
+.nav-menu.open {
+  display: flex;
+  transform: translateX(0%);
+  pointer-events: auto;
+}
