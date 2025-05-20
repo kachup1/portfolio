@@ -8,6 +8,9 @@ import kiwibot1 from '../assets/images/kiwibot1.png';
 import kiwibot2 from '../assets/images/kiwibot2.jpg';
 import kiwibot3 from '../assets/images/kiwibot3.jpg';
 import portfolio from '../assets/images/website-landing.JPG';
+import carqos1 from '../assets/images/carqos1.JPG';
+import carqos2 from '../assets/images/carqos2.JPG';
+import carqos3 from '../assets/images/carqos3.JPG';
 
 function Projects(){
     const [expandedIndex, setExpandedIndex] = useState(null);
@@ -97,7 +100,7 @@ function Projects(){
                         <h3 className="project-dates">May 2025</h3>
                     </div>
                         <p className="paragraph">
-                            A full-stack portfolio site to showcase my development work and design style. Built using React, Flask, and AOS with scroll animations, contact form validation, and secure email integration. Deployed via Vercel (frontend) and Render (backend).
+                            A full stack portfolio site to showcase my development work and design style. Built using React, Flask, and AOS with scroll animations, contact form validation, and secure email integration. Deployed via Vercel (frontend) and Render (backend).
                         </p>
 
                         <div className="links-content">
@@ -113,6 +116,36 @@ function Projects(){
                                 onClick={() => toggleExpand(6)}
                             />
                             </div>
+
+                    <div className="horizontal-line"></div>
+
+                    <div className="project-header">
+                        <h2 className="project-title">Carqos</h2>
+                        <h3 className="project-dates">Mar 2025 - Current</h3>
+                    </div>
+                    <p className="paragraph">   A full stack web app that helps users compare average car maintenance prices by location and service type. Users can also submit quotes to crowdsource data and reduce overpaying.</p>
+                    
+                    <div className="links-content">
+
+                        <a href="https://github.com/veenx0704/carqos" className="link-1" target="_blank" rel="noopener noreferrer">
+                            <h3>
+                                Learn more <img src={arrow} alt="arrow" />
+                            </h3>
+                        </a>
+                    </div>
+
+                    <div className="image-container">
+                    {[carqos1, carqos2, carqos3].map((image, index) => (
+                        <img
+                        key={index + 3}
+                        src={image}
+                        alt={`carqos${index + 1}`}
+                        className={expandedIndex === index + 3 ? "project-image expanded" : "project-image"}
+                        onClick={() => toggleExpand(index + 3)}
+                        />
+
+                    ))}
+                    </div>
 
                     <div className="horizontal-line"></div>
 
