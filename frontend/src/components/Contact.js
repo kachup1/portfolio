@@ -15,8 +15,6 @@ function Contact() {
     const [captchaToken, setCaptchaToken] = useState('');
     const [botField, setBotField] = useState('');
 
-    console.log("RECAPTCHA KEY:", process.env.REACT_APP_RECAPTCHA_SITE_KEY);
-
 
     const handleSubmit = async () => {
         if (!name || !email || !message) {
@@ -114,7 +112,7 @@ function Contact() {
                     onChange={(e) => setBotField(e.target.value)}
                     style={{ display: 'none' }}
                 />
-                
+
                 <div className="recaptcha-wrapper">
                 <ReCAPTCHA
                     sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
