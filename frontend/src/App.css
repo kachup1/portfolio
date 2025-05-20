@@ -117,15 +117,14 @@ footer {
     text-align: right;
   }
   .project-container {
+    display: flex;
     flex-direction: row;
-    align-items: flex-start;
-    min-height: 300px;
+    align-items: stretch;
   }
   .vertical-rectangle {
     position: relative;
     left: -15%; 
     width: 2px;
-    height: auto;
     background-color: white;
   }
   .project-content {
