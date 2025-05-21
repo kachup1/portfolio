@@ -1,5 +1,5 @@
 import './Contact.css';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import github from '../assets/images/github_logo.png';
 import linkedin from '../assets/images/LinkedIn_icon.png';
 import ReCAPTCHA from "react-google-recaptcha";
@@ -12,60 +12,60 @@ function Contact() {
     const [message, setMessage] = useState('');
     const [statusMessage, setStatusMessage] = useState('');
     const [statusType, setStatusType] = useState('');
-    const [captchaToken, setCaptchaToken] = useState('');
     const [botField, setBotField] = useState('');
+    const recaptchaRef = useRef() ;
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
 
-    const handleSubmit = async () => {
-        if (!name || !email || !message) {
-            setStatusMessage("*All fields must be filled.");
-            setStatusType("error")
-            return;
-        }
+const handleSubmit = async () => {
+    if (!name || !email || !message) {
+        setStatusMessage("*All fields must be filled.");
+        setStatusType("error");
+        return;
+    }
 
-        if (!email.includes('@') || !email.includes('.')) {
-            setStatusMessage("*Please enter a valid email address.");
-            setStatusType("error")
-            return;
-        }
+    if (!email.includes('@') || !email.includes('.')) {
+        setStatusMessage("*Please enter a valid email address.");
+        setStatusType("error");
+        return;
+    }
 
-        if (message.length < 10) {
-            setStatusMessage("*Message must be at least 10 characters.");
-            setStatusType("error")
-            return;
-        }
-        if (!captchaToken) {
-            setStatusMessage("*Please complete the reCAPTCHA.");
-            setStatusType("error");
-            return;
-        }
+    if (message.length < 10) {
+        setStatusMessage("*Message must be at least 10 characters.");
+        setStatusType("error");
+        return;
+    }
+    setIsSubmitting(true);
+    try {
+        const token = await recaptchaRef.current.executeAsync();
+        recaptchaRef.current.reset(); // Optional: resets for future use
 
-        
-        //send to Flask
-        try {
-            const response = await fetch("https://portfolio-l420.onrender.com/api/contact", {
+        const response = await fetch("https://portfolio-l420.onrender.com/api/contact", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ name, email, message, captchaToken, botField: '' }),
-            });
+            body: JSON.stringify({ name, email, message, captchaToken: token, botField: '' }),
+        });
 
-            const data = await response.json();
+        const data = await response.json();
 
-            if (response.ok) {
+        if (response.ok) {
             setStatusMessage("Message sent successfully!");
-            setStatusType("success")
+            setStatusType("success");
             setName('');
             setEmail('');
             setMessage('');
-            } else {
+        } else {
             setStatusMessage("Failed to send message: " + data.error);
-            setStatusType('error')
+            setStatusType("error");
         }
-        } catch (err) {
-            setStatusMessage("An error occurred: " + err.message);
-            setStatusType('error')
-        }
-    };
+    } catch (err) {
+        setStatusMessage("An error occurred: " + err.message);
+        setStatusType("error");
+        } finally {
+        setIsSubmitting(false);
+    }
+};
+
 
     return (
         <section id="contact" data-aos="fade-right">
@@ -122,13 +122,22 @@ function Contact() {
                 <div className="recaptcha-wrapper">
                 <ReCAPTCHA
                     sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
-                    onChange={(token) => setCaptchaToken(token)}
+                    size="invisible"
+                    ref={recaptchaRef}
                 />
+
                 </div>
 
                 <div className="button-container">
 
-                    <button type="button" className="submit-button" onClick={handleSubmit}>Submit</button>
+                    <button
+                        type="button"
+                        className="submit-button"
+                        onClick={handleSubmit}
+                        disabled={isSubmitting}
+                    >
+                        {isSubmitting ? "Sending..." : "Submit"}
+                    </button>
                     {statusMessage && (
                         <div className={`status-message ${statusType}`}>
                             {statusMessage}
