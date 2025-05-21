@@ -1,5 +1,5 @@
 ![Portfolio Preview](./line.JPG)
-![Portfolio Preview](./invertedlandingpage.png)
+
 I'm full-stack software developer with a focus on creating responsive, user-friendly applications. This is my personal portfolio, built to showcase my work, skills, and background in both design and development. [Visit the live site →](https://karlachuprinski.com) 
 
 ## Tech Stack
