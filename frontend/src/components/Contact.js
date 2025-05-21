@@ -139,6 +139,7 @@ const handleSubmit = async () => {
                     sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
                     size="invisible"
                     ref={recaptchaRef}
+                    badge="inline"
                 />
 
                 </div>
