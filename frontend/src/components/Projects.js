@@ -123,7 +123,7 @@ function Projects(){
                         <h2 className="project-title">Carqos</h2>
                         <h3 className="project-dates">Mar 2025 - Current</h3>
                     </div>
-                    <p className="paragraph">   A full stack web app that helps users compare average car maintenance prices by location and service type. Users can also submit quotes to crowdsource data and reduce overpaying.</p>
+                    <p className="paragraph">   Currently in development - A full stack web app that helps users compare average car maintenance prices by location and service type. Users can also submit quotes to crowdsource data and reduce overpaying.</p>
                     
                     <div className="links-content">
 
