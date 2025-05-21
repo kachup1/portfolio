@@ -7,7 +7,7 @@
 .projects-string {
     font-size: clamp(0.5rem, 6vw, 90px);
     margin: 0;
-    padding-top: 0;
+    padding-top: 20%;
     padding-left: 15%;
     font-weight: 400;
     position: relative;
