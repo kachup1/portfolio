@@ -38,6 +38,21 @@ const handleSubmit = async () => {
     setIsSubmitting(true);
     try {
         const token = await recaptchaRef.current.executeAsync();
+        console.log("reCAPTCHA token:", token);
+        if (!token) throw new Error("No token received from reCAPTCHA");
+
+        recaptchaRef.current.reset();
+
+        // Proceed with fetch...
+    } catch (err) {
+        console.error("reCAPTCHA error:", err);
+        setStatusMessage("Failed to verify reCAPTCHA. Try again.");
+        setStatusType("error");
+        return;
+    }
+
+    try {
+        const token = await recaptchaRef.current.executeAsync();
         recaptchaRef.current.reset(); // Optional: resets for future use
 
         const response = await fetch("https://portfolio-l420.onrender.com/api/contact", {
