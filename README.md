@@ -22,7 +22,7 @@
 
 <h2 align="center">★ Features ★</h2>
 
-- [Figma Design](https://www.figma.com/design/jB6mbOxMc4NDdTo7ch3ffA/Personal-Website?node-id=0-1&t=DedcdCiYVlKuVlVZ-1) - planned layout & visual structure before coding 
+- [Figma Design](https://www.figma.com/proto/jB6mbOxMc4NDdTo7ch3ffA/Personal-Website?node-id=0-1&t=dHkVjL4Xxx7QRPGL-1) - planned layout & visual structure before coding 
 - Clean, mobile-responsive layout
 - Scroll-based animations for a smooth experience
 - Fully functional contact form with reCAPTCHA and email integration
