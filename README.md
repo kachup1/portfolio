@@ -6,8 +6,10 @@
 <h4 align="center">★ [Visit the live site →](https://karlachuprinski.com) ★</h4>
 
 
-![Portfolio Preview](./line2.JPG)
 
+<div align="right">
+  <img src="line2.png" width="150"/>
+</div>
 
 
 <h2 align="center">★ Tech Stack ★</h2>
@@ -34,5 +36,10 @@ Feel free to reach out via the contact form on the site or connect with me here:
 *  [karlachuprinski@gmail.com](mailto:karlachuprinski@gmail.com)
 *  [LinkedIn](https://www.linkedin.com/in/karlachuprinski)
 *  [GitHub](https://github.com/kachup1)
-![Portfolio Preview](./line2.JPG)
+
+<div align="right">
+  <img src="line2.png" width="150"/>
+</div>
+
+
 
