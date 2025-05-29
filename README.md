@@ -1,5 +1,5 @@
 
-<img src="line.png" width="1000"/>
+<img src="line.png" width="150"/>
 
 
 <h2 align="center">★ Hi! I'm full-stack software developer with a focus on creating responsive, user-friendly applications. This is my personal portfolio, built to showcase my work, skills, and background in both design and development ★ </h2>
