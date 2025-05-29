@@ -45,7 +45,11 @@ function Projects(){
                                 View demo <img src={arrow} alt="arrow" />
                             </h3>
                         </a>
-
+                        <a href="https://www.figma.com/proto/c3NpliwHroUO4iI9sx4EPQ/High-Fidelity-Design?node-id=3-2&t=dHkVjL4Xxx7QRPGL-1" className="link-2" target="_blank" rel="noopener noreferrer">
+                            <h3>
+                                View figma prototype<img src={arrow} alt="arrow" />
+                            </h3>
+                        </a>
                     </div>
 
                     <div className="image-container">
@@ -105,10 +109,10 @@ function Projects(){
 
                         <div className="links-content">
                             <a href="https://github.com/kachup1/portfolio" target="_blank" className="link-1">
-                                <h3>View Source <img src={arrow} alt="arrow" /></h3>
+                                <h3>View source <img src={arrow} alt="arrow" /></h3>
                             </a>
-                             <a href="https://www.figma.com/design/jB6mbOxMc4NDdTo7ch3ffA/Personal-Website?node-id=0-1&t=0ToYQJo1ViwvQjWR-1" target="_blank" className="link-1">
-                                <h3>View Figma Design <img src={arrow} alt="arrow" /></h3>
+                             <a href="https://www.figma.com/proto/jB6mbOxMc4NDdTo7ch3ffA/Personal-Website?node-id=0-1&t=dHkVjL4Xxx7QRPGL-1" target="_blank" className="link-1">
+                                <h3>View figma prototype <img src={arrow} alt="arrow" /></h3>
                             </a>                           
                         </div>
                     <div className="image-container">

@@ -51,7 +51,7 @@
     display: flex;
     align-items: baseline;
     justify-content: flex-start;
-    gap: 10%;
+    gap: 3%;
 }
 
 .link-1, .link-2 {
