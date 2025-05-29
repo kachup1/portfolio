@@ -1,4 +1,4 @@
-![Portfolio Preview](./line.JPG)
+![Portfolio Preview](./line.png)
 
 
 <h2 align="center">★ Hi! I'm full-stack software developer with a focus on creating responsive, user-friendly applications. This is my personal portfolio, built to showcase my work, skills, and background in both design and development ★ </h2>
