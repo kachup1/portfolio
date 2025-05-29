@@ -5,7 +5,7 @@
 <h4 align="center">★ [Visit the live site →](https://karlachuprinski.com) ★</h4>
 
 
-![Portfolio Preview](./line.JPG)
+![Portfolio Preview](./line2.JPG)
 
 
 
@@ -19,6 +19,7 @@
 
 <h2 align="center">★ Features ★</h2>
 
+- [Figma Design](https://www.figma.com/design/jB6mbOxMc4NDdTo7ch3ffA/Personal-Website?node-id=0-1&t=DedcdCiYVlKuVlVZ-1) - planned layout & visual structure before coding 
 - Clean, mobile-responsive layout
 - Scroll-based animations for a smooth experience
 - Fully functional contact form with reCAPTCHA and email integration
