@@ -104,10 +104,13 @@ function Projects(){
                         </p>
 
                         <div className="links-content">
-                        <a href="https://github.com/kachup1/portfolio" target="_blank" className="link-1">
-                            <h3>View Source <img src={arrow} alt="arrow" /></h3>
-                        </a>
-                    </div>
+                            <a href="https://github.com/kachup1/portfolio" target="_blank" className="link-1">
+                                <h3>View Source <img src={arrow} alt="arrow" /></h3>
+                            </a>
+                             <a href="https://www.figma.com/design/jB6mbOxMc4NDdTo7ch3ffA/Personal-Website?node-id=0-1&t=0ToYQJo1ViwvQjWR-1" target="_blank" className="link-1">
+                                <h3>View Figma Design <img src={arrow} alt="arrow" /></h3>
+                            </a>                           
+                        </div>
                     <div className="image-container">
                             <img
                                 src={portfolio}
